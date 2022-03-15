@@ -1,0 +1,28 @@
+@import "../variables/variables";
+* {
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+	font-family: "Montserrat", sans-serif;
+}
+.container {
+	padding-left: 15px;
+	padding-right: 15px;
+	margin-left: auto;
+	margin-right: auto;
+	@media (min-width: 768px) {
+		& {
+			width: 768px;
+		}
+	}
+	@media (min-width: 992px) {
+		& {
+			width: 970px;
+		}
+	}
+	@media (min-width: 1200px) {
+		& {
+			width: 1170px;
+		}
+	}
+}

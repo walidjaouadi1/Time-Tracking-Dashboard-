@@ -1,0 +1,301 @@
+* {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  font-family: "Montserrat", sans-serif;
+}
+
+.container {
+  padding-left: 15px;
+  padding-right: 15px;
+  margin-left: auto;
+  margin-right: auto;
+}
+@media (min-width: 768px) {
+  .container {
+    width: 768px;
+  }
+}
+@media (min-width: 992px) {
+  .container {
+    width: 970px;
+  }
+}
+@media (min-width: 1200px) {
+  .container {
+    width: 1170px;
+  }
+}
+
+section {
+  background-color: #0d1323;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.block {
+  margin: 100px 0;
+}
+
+.boxes {
+  display: -ms-grid;
+  display: grid;
+  gap: 30px;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  color: #fff;
+}
+.boxes .reported {
+  -ms-grid-row: 1;
+  -ms-grid-row-span: 2;
+  grid-row: 1/span 2;
+  border-radius: 20px;
+  background-color: #1d204b;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-rows: 1fr auto;
+  grid-template-rows: 1fr auto;
+}
+.boxes .reported .info {
+  background-color: #5746ea;
+  padding: 30px;
+  border-radius: 20px;
+}
+.boxes .reported .info .person p {
+  margin-bottom: 10px;
+}
+.boxes .reported .info .person h1 {
+  margin-top: 0;
+  font-size: 36px;
+  font-weight: normal;
+}
+.boxes .reported .info .image {
+  width: 80px;
+  height: 80px;
+  border: 3px solid #fff;
+  border-radius: 50%;
+  margin-bottom: 40px;
+}
+.boxes .reported .info .image img {
+  max-width: 100%;
+}
+.boxes .reported .time {
+  padding: 30px;
+}
+.boxes .reported .time p {
+  margin-top: 0;
+  margin-bottom: 30px;
+  cursor: pointer;
+}
+.boxes .reported .time p.active {
+  color: #565d93;
+}
+.boxes .reported .time p:last-of-type {
+  margin-bottom: 0px;
+}
+@media (max-width: 768px) {
+  .boxes .reported {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .boxes .reported .info {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .boxes .reported .info .person {
+    margin-left: 20px;
+  }
+  .boxes .reported .info .person h1 {
+    font-size: 35px;
+    margin: 0;
+  }
+  .boxes .reported .info .person p {
+    margin: 0;
+  }
+  .boxes .reported .info .image {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    margin: 0;
+  }
+  .boxes .reported .time {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    width: 100%;
+  }
+  .boxes .reported .time p {
+    margin: 0;
+  }
+}
+.boxes .box {
+  height: 250px;
+  border-radius: 20px;
+  position: relative;
+  z-index: 2;
+  border-radius: 20px;
+  overflow: hidden;
+  display: -ms-grid;
+  display: grid;
+}
+@media (max-width: 768px) {
+  .boxes .box {
+    height: -webkit-fit-content;
+    height: -moz-fit-content;
+    height: fit-content;
+  }
+}
+.boxes .box.mounthly, .boxes .box.weekly {
+  display: none;
+}
+.boxes .box .pic {
+  position: relative;
+  height: 50px;
+}
+.boxes .box .pic img {
+  position: absolute;
+  right: 20px;
+  z-index: -1;
+  top: -5px;
+}
+.boxes .box .text {
+  padding: 30px;
+  background-color: #1d204b;
+  border-radius: 20px;
+  cursor: pointer;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+}
+@media (max-width: 768px) {
+  .boxes .box .text {
+    height: -webkit-fit-content;
+    height: -moz-fit-content;
+    height: fit-content;
+  }
+}
+.boxes .box .text .title {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+.boxes .box .text .title span {
+  font-weight: bold;
+  font-size: 18px;
+}
+.boxes .box .text .content h1 {
+  font-size: 40px;
+  font-weight: 500;
+}
+.boxes .box .text .content p {
+  margin-bottom: 0;
+  color: #aeb1e4;
+}
+@media (max-width: 768px) {
+  .boxes .box .text .content {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .boxes .box .text .content p {
+    margin: 0;
+  }
+}
+.boxes .box .text:hover {
+  background-color: #34397b;
+}
+.boxes .box.work::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 60%;
+  left: 0;
+  top: 0;
+  z-index: -1;
+  background-color: #ff8b64;
+}
+.boxes .box.play::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 60%;
+  left: 0;
+  top: 0;
+  z-index: -1;
+  background-color: #56c2e6;
+}
+.boxes .box.study::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 60%;
+  left: 0;
+  top: 0;
+  z-index: -1;
+  background-color: #ff5e7d;
+}
+.boxes .box.exercice::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 60%;
+  left: 0;
+  top: 0;
+  z-index: -1;
+  background-color: #4bcf83;
+}
+.boxes .box.social::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 60%;
+  left: 0;
+  top: 0;
+  z-index: -1;
+  background-color: #7235d1;
+}
+.boxes .box.self::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 60%;
+  left: 0;
+  top: 0;
+  z-index: -1;
+  background-color: #f1c75b;
+}
+/*# sourceMappingURL=main.css.map */

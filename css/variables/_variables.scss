@@ -1,0 +1,18 @@
+$mainColor: #1d204b;
+$reportColor: #5746ea;
+$workColor: #ff8b64;
+$playColor: #56c2e6;
+$studyColor: #ff5e7d;
+$exerciseColor: #4bcf83;
+$socialColor: #7235d1;
+$selfCareColor: #f1c75b;
+
+@mixin before() {
+	content: "";
+	position: absolute;
+	width: 100%;
+	height: 60%;
+	left: 0;
+	top: 0;
+	z-index: -1;
+}
